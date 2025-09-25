@@ -1,72 +1,118 @@
-# Babble Buddy AI
+# Voice Cloning – Personalized Speech Synthesis (Frontend)
 
-## Project info
+ > Note: On first load, please wait 2–3 minutes. The app initializes several 3D elements which can take time to fetch and compile in the browser, including examples like:
+ > - Spline-powered scenes and backgrounds
+ > - Interactive Orb (Three.js) with real-time interaction
+ > - Particle Field and Floating Elements
+ > - Speaker/Microphone 3D scenes and visualizers
 
+ This repository contains the fully custom-built frontend for a Voice Cloning and Personalized Speech Synthesis application.
 
-## How can I edit this code?
+ - Authored solely by the project owner (no additional contributors).
+ - Modern, responsive UI with smooth 3D visuals and an accessible design system.
 
-There are several ways of editing your application.
+ ---
 
+ ## Overview
 
-**Use your preferred IDE**
+The frontend provides:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes.
+- A clean interface to enroll voice samples and synthesize speech.
+- Real-time audio recording, waveform visualization, and playback controls.
+- Rich 3D/animated visuals to enhance the user experience (Spline and Three.js).
+- A component-driven architecture for maintainability and reusability.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+ ---
 
-Follow these steps:
+ ## Features
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- Audio
+  - Audio recorder and waveform visualization
+  - Error boundaries and robust UI states
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- 3D & Visuals
+  - Spline background scenes
+  - Interactive Orb, Particle Field, Floating Elements
+  - Speaker/Microphone scenes and animated transitions
 
-# Step 3: Install the necessary dependencies.
-npm i
+- UI/UX
+  - shadcn/ui components with Tailwind CSS
+  - Responsive, accessible design
+  - Theming and utility-first styling
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+ ---
+
+ ## Tech Stack
+
+ - Vite (bundler & dev server)
+ - React (UI) + TypeScript
+ - Tailwind CSS + PostCSS
+ - shadcn/ui component library
+ - Three.js & Spline (3D scenes and interactions)
+ - ESLint (code quality) and modern TS configs
+
+ ---
+
+ ## Getting Started
+
+Prerequisites:
+
+ - Node.js and npm installed (recommend using nvm)
+
+Install and run:
+
+```bash
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Open the local URL printed in the terminal. First load may take 2–3 minutes due to 3D assets.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+ ---
 
-**Use GitHub Codespaces**
+ ## Available Scripts
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+ - `npm run dev` – Start the development server
+ - `npm run build` – Build for production into `dist/`
+ - `npm run preview` – Preview the production build locally
 
-## What technologies are used for this project?
+ ---
 
-This project is built with:
+ ## Project Structure (high level)
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+ - `src/`
+   - `components/`
+     - `audio/` – Recorder, waveform, audio UI
+     - `three/` – Interactive Orb, Particle Field, Speaker/Mic scenes, Spline background
+     - `ui/` – shadcn/ui component wrappers and utilities
+   - `pages/` – App pages and routing
+   - `lib/` – Utility functions
 
-## How can I deploy this project?
+ - `public/` – Static assets (icons, placeholders, robots.txt)
+ - `tailwind.config.ts`, `postcss.config.js` – Styling configuration
+ - `eslint.config.js` – Linting configuration
 
-Build a production bundle with:
+ ---
 
-```sh
+ ## Deployment
+
+Build a production bundle:
+
+```bash
 npm run build
 npm run preview
 ```
 
-## Can I connect a custom domain?
+Deploy the contents of `dist/` to your hosting of choice (e.g., Netlify, Vercel, GitHub Pages, or a static server).
 
-Yes, you can!
+ ---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+ ## Ownership & Contributions
 
-Configure your hosting provider to point to the build output in dist/.
+This project was wholly developed by the owner. At this time, external contributions are not being accepted.
+
+---
+
+## License
+
+Copyright The project owner. All rights reserved.
