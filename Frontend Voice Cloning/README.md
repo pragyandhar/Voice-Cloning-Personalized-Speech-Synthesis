@@ -8,7 +8,6 @@
 
  This repository contains the fully custom-built frontend for a Voice Cloning and Personalized Speech Synthesis application.
 
- - Authored solely by the project owner (no additional contributors).
  - Modern, responsive UI with smooth 3D visuals and an accessible design system.
 
  ---
@@ -106,12 +105,6 @@ npm run preview
 Deploy the contents of `dist/` to your hosting of choice (e.g., Netlify, Vercel, GitHub Pages, or a static server).
 
  ---
-
- ## Ownership & Contributions
-
-This project was wholly developed by the owner. At this time, external contributions are not being accepted.
-
----
 
 ## License
 
