@@ -1,0 +1,11 @@
+torch==2.3.0
+torchaudio==2.3.0
+TTS==0.22.0
+speechbrain==0.5.14
+pandas
+numpy
+gradio==4.19.2
+jupyter
+soundfile
+librosa
+tqdm
