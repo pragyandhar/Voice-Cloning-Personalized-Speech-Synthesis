@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Form, UploadFile
 from fastapi.responses import FileResponse
 import os
-from english_model.clone_my_voice import generate_voice
+from clone_my_voice import generate_voice
 
 app = FastAPI(title="English Voice Cloning API")
 
