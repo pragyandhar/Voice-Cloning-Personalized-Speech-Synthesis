@@ -2,27 +2,28 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
-// https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
-    allowedHosts: ['f2d26f96a868.ngrok-free.app'],
+    allowedHosts: ["f2d26f96a868.ngrok-free.app"],
   },
-  plugins: [
-    react(),
-  ],
+  plugins: [react()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
   optimizeDeps: {
-    exclude: ['@splinetool/runtime']
+    include: ["@splinetool/react-spline", "@splinetool/runtime"],
   },
   build: {
+    commonjsOptions: {
+      include: [/node_modules/],
+    },
     rollupOptions: {
-      external: ['@splinetool/runtime']
-    }
+      // ⚠️ Remove external here to ensure Spline is bundled
+      external: [],
+    },
   },
 }));
