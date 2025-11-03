@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     host: "::",
     port: 8080,
-    allowedHosts: ["f2d26f96a868.ngrok-free.app"],
+    allowedHosts: ['f2d26f96a868.ngrok-free.app'],
   },
   plugins: [react()],
   resolve: {
@@ -16,16 +16,15 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: ["@splinetool/react-spline", "@splinetool/runtime"],
-    force: true,
   },
   build: {
-    outDir: "dist",
-    commonjsOptions: { include: [/node_modules/] },
     rollupOptions: {
-      external: [],
       output: {
         manualChunks: undefined,
       },
+    },
+    commonjsOptions: {
+      include: [/node_modules/],
     },
   },
 });

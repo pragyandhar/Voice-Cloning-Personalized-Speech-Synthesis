@@ -107,7 +107,6 @@ export default function SplineBackground({
             scene={scene}
             onLoad={onLoad}
             // If the version supports it, onError will be called; otherwise pre-check and boundary handle it.
-            // @ts-expect-error - onError may not exist on older versions
             onError={(e: unknown) => {
               console.error('Spline load error', e);
               setError('Failed to load 3D scene');
