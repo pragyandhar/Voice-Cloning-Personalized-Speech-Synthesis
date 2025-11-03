@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
-export default defineConfig(({ mode }) => ({
+export default defineConfig({
   server: {
     host: "::",
     port: 8080,
@@ -16,14 +16,16 @@ export default defineConfig(({ mode }) => ({
   },
   optimizeDeps: {
     include: ["@splinetool/react-spline", "@splinetool/runtime"],
+    force: true,
   },
   build: {
-    commonjsOptions: {
-      include: [/node_modules/],
-    },
+    outDir: "dist",
+    commonjsOptions: { include: [/node_modules/] },
     rollupOptions: {
-      // ⚠️ Remove external here to ensure Spline is bundled
       external: [],
+      output: {
+        manualChunks: undefined,
+      },
     },
   },
-}));
+});
