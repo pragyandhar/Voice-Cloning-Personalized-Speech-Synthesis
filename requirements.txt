@@ -11,3 +11,4 @@ pydub
 requests
 matplotlib
 numba
+unidecode
