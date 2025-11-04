@@ -1,5 +1,5 @@
-from ..symbols import symbols
-from .. import cleaners
+from .symbols import symbols
+from . import cleaners
 import re
 
 

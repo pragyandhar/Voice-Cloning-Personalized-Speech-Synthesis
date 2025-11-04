@@ -10,7 +10,7 @@ from .hparams import hparams
 from .models.tacotron import Tacotron
 from .utils.symbols import symbols
 from .utils.text import text_to_sequence
-from ...vocoder.display import simple_table
+from ..vocoder.display import simple_table
 
 
 class Synthesizer:
