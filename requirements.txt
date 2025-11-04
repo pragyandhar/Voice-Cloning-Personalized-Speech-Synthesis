@@ -5,3 +5,9 @@ numpy
 librosa
 soundfile
 scipy
+tqdm
+webrtcvad
+pydub
+requests
+matplotlib
+numba
