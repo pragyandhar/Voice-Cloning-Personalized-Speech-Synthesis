@@ -6,10 +6,10 @@ import numpy as np
 import soundfile as sf
 
 # Local modules
-from .utils.default_models import ensure_default_models
-from encoder import inference as encoder_infer
-from synthesizer.inference import Synthesizer
-from vocoder import inference as vocoder_infer
+from english_model.utils.default_models import ensure_default_models
+from english_model.encoder import inference as encoder_infer
+from english_model.synthesizer.inference import Synthesizer
+from english_model.vocoder import inference as vocoder_infer
 
 
 def synthesize(voice_path: Path, text: str, models_dir: Path, out_path: Path):

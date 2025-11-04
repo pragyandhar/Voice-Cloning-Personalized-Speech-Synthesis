@@ -1,11 +1,14 @@
-from encoder.params_data import *
-from encoder.model import SpeakerEncoder
-from encoder.audio import preprocess_wav   # We want to expose this function from here
-from matplotlib import cm
-from encoder import audio
-from pathlib import Path
-import numpy as np
 import torch
+from pathlib import Path
+from typing import Union, List
+import numpy as np
+import librosa
+
+# Local imports
+from . import audio
+from .params_data import *
+from .params_model import *
+from .model import SpeakerEncoder
 
 _model = None # type: SpeakerEncoder
 _device = None # type: torch.device
