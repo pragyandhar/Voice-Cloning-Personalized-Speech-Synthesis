@@ -1,9 +1,10 @@
 import api from '../services/api';
 
-const handleVoiceCloning = async (audioFile) => {
+const handleVoiceCloning = async (audioFile, text) => {
     try {
         const formData = new FormData();
         formData.append('audio', audioFile);
+        formData.append('text', text);
 
         const response = await api.post('/clone-voice', formData, {
             headers: {
@@ -17,3 +18,5 @@ const handleVoiceCloning = async (audioFile) => {
         throw error;
     }
 };
+
+export default handleVoiceCloning;
